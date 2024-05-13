@@ -46,6 +46,9 @@ module.exports = {
     },
 
     extend: {
+      backgroundImage: {
+        'embroidery': "url('/assets/img/embroidery.JPEG)",
+      },
       spacing: {
         13: "3.25rem",
         15: "3.75rem",
