@@ -1885,11 +1885,6 @@ html {
   color: rgb(146 146 147 / var(--tw-text-opacity));
 }
 
-.text-orange {
-  --tw-text-opacity: 1;
-  color: rgb(244 151 108 / var(--tw-text-opacity));
-}
-
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(96 156 225 / var(--tw-text-opacity));
@@ -1903,6 +1898,11 @@ html {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-yellow {
+  --tw-text-opacity: 1;
+  color: rgb(251 232 166 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1990,6 +1990,11 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:text-yellow:hover {
+  --tw-text-opacity: 1;
+  color: rgb(251 232 166 / var(--tw-text-opacity));
+}
+
 .focus\:border-black:focus {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -2063,6 +2068,11 @@ html {
 .group:hover .group-hover\:bg-darkBlue {
   --tw-bg-opacity: 1;
   background-color: rgb(19 56 99 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 232 166 / var(--tw-bg-opacity));
 }
 
 .group:hover .group-hover\:text-darkBlue {
@@ -2166,11 +2176,6 @@ html {
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 
   .sm\:text-lg {
