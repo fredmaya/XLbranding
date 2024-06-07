@@ -2,6 +2,7 @@ module.exports = {
     plugins: [
         require("tailwindcss/nesting"),
         require("tailwindcss"),
+        require("tailwindcss-animated"),
         require("autoprefixer"),
         ...(process.env.NODE_ENV === "production"
             ? [
