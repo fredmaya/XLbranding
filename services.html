@@ -78,24 +78,7 @@
   ></script>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <style>
-   .bg-custom{
-     background-image: url('/assets/img/service2.JPEG');
-     background-size: cover;
-     background-position: center;
-   }
-    .bg-custom2{
-      background-image: url('/assets/img/DYE Sublimated 2.jpg');
-      background-size: cover;
-      background-position: center;
-      
-    }
-    .bg-custom3{
-      background-image: url('/assets/img/DYE Sublimated.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
+
 
   
 </head>
@@ -133,7 +116,7 @@
         <li class="group pl-6">
           
           <span
-            @click="triggerNavItem('#about')"
+            @click="triggerNavItem('index.html#about')"
             class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
             >About</span
           >
@@ -198,7 +181,7 @@
       <li class="py-2">
         
         <span
-          @click="triggerMobileNavItem('#about')"
+          @click="triggerMobileNavItem('index.html#about')"
           class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
           >About</span
         >
@@ -218,7 +201,7 @@
       <li class="py-2">
         
         <span
-          @click="triggerMobileNavItem('#contact')"
+          @click="triggerMobileNavItem('index.html#contact')"
           class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
           >Contact</span
         >
