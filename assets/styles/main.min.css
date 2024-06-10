@@ -760,6 +760,19 @@ select {
   padding-right: 1rem;
   padding-left: 1rem;
 }
+
+
+@media (max-width: 400px) {
+  .list-decimal li {
+      font-size: 0.875rem; 
+  }
+
+
+  
+  .text-primary {
+      font-size: 1rem; 
+  }
+}
 @media (min-width: 375px) {
 
   .container {
