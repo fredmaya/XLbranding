@@ -101,8 +101,8 @@
     }
 }"
 >
-  <div class="w-full z-50 top-0 py-3 sm:py-5  absolute
-  ">
+  <div class="w-full z-50 top-0 py-3 sm:py-5 fixed
+  " id="navbar">
   <div class="container flex items-center justify-between">
     <div>
       <a href="/">
@@ -179,7 +179,7 @@
   @click.self="mobileMenu = false"
 >
   <div
-    class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3"
+    class="absolute right-0 min-h-screen w-2/3 bg-black py-4 px-8 shadow md:w-1/3"
     @click.stop
   >
     <button
@@ -195,7 +195,7 @@
         
         <span
           @click="triggerMobileNavItem('#about')"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange hover:font-bo"
           >About</span
         >
         
@@ -205,7 +205,7 @@
         
         <span
           @click="triggerMobileNavItem('#services')"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
           >Services</span
         >
         
@@ -215,7 +215,7 @@
         
         <span
           @click="triggerMobileNavItem('#contact')"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
           >Contact</span
         >
         
@@ -225,7 +225,7 @@
         
         <a
           href="order.html"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
           >Order</a
         >
         
@@ -251,7 +251,7 @@
 
       <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
         <h1
-          class="text-center font-header text-4xl text-bluey sm:text-left sm:text-5xl md:text-6xl"
+          class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
         >
           Welcome to XL Branding
         </h1>
@@ -315,7 +315,7 @@
       <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28"></div>
       <div class="text-center">
         <h3
-          class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-darkBlue lg:text-xl"
+          class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-darkBlue lg:text-xl bg-yellow"
         >
           Embroidery
         </h3>
