@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+
+  <meta
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    name="viewport"
+  />
+
+  <title>XL Branding</title>
+
+  <meta property="og:title" content="Homepage | Atom Template" />
+
+  <meta property="og:locale" content="en_US" />
+
+  <link
+    rel="canonical"
+    href="//"
+  />
+
+  <meta
+    property="og:url"
+    content="//"
+  />
+
+  <meta
+    name="description"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  />
+
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+
+  <meta name="theme-color" content="#5540af" />
+
+  <meta property="og:site_name" content="Atom Template" />
+
+  <meta property="og:image" content="//assets/img/social.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="twitter:site" content="@tailwindmade" />
+
+  <link
+    crossorigin="crossorigin"
+    href="https://fonts.gstatic.com"
+    rel="preconnect"
+  />
+
+  <link
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="preload"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    crossorigin="anonymous"
+    href="/assets/styles/main.min.css"
+    media="screen"
+    rel="stylesheet"
+  />
+  
+  <script
+    defer
+    src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"
+  ></script>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+  
+</head>
+
+
+  <body
+    :class="{ 'overflow-hidden max-h-screen': mobileMenu }"
+    class="relative"
+    x-data="{ mobileMenu: false }"
+  >
+    
+    <div id="main" class="relative">
+      <div
+  x-data="{
+    triggerNavItem(id) {
+        $scroll(id)
+    },
+    triggerMobileNavItem(id) {
+        mobileMenu = false;
+        this.triggerNavItem(id)
+    }
+}"
+>
+  <div class="w-full z-50 top-0 py-3 sm:py-5  absolute
+  ">
+  <div class="container flex items-center justify-between">
+    <div>
+      <a href="/">
+        <img src="/assets/img/xlBranding-logo.png" class="w-40 lg:w-52" alt="logo image" />
+      </a>
+    </div>
+    <div class="hidden lg:block">
+      <ul class="flex items-center">
+
+        <li class="group pl-6">
+          
+          <a
+            href="index.html"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Home</a
+          >
+          
+          <span
+            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+          ></span>
+        </li>
+        
+        <li class="group pl-6">
+          <a
+            href="order.html"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Order</a
+          >
+          
+          <span
+            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+          ></span>
+        </li>
+      
+        
+        <li class="group pl-6">
+          
+          <span
+            @click="triggerNavItem('#contact')"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Contact</span
+          >
+          
+          <span
+            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+          ></span>
+        </li>
+
+
+        
+      </ul>
+    </div>
+    <div class="block lg:hidden">
+      <button @click="mobileMenu = true">
+        <i class="bx bx-menu text-4xl text-black"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden"
+  :class="{ 'opacity-100 pointer-events-auto': mobileMenu }"
+  @click.self="mobileMenu = false"
+>
+  <div
+    class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3"
+    @click.stop
+  >
+    <button
+      class="absolute top-0 right-0 mt-4 mr-4"
+      @click="mobileMenu = false"
+    >
+      <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="" />
+    </button>
+
+    <ul class="mt-8 flex flex-col">
+
+      <li class="py-2">
+        
+        <a
+          href="index.html"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >Home</a
+        >
+        
+      </li>
+      
+      <li class="py-2">
+        
+        <a
+          href="order.html"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >Order</a
+        >
+        
+      </li> 
+     
+      
+      <li class="py-2">
+        
+        <span
+          @click="triggerMobileNavItem('index.html#contact')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >Contact</span
+        >
+        
+      </li>
+     
+      
+    </ul>
+  </div>
+</div>
+
+
+      <div>
+        <div
+  class="relative bg-cover bg-center bg-no-repeat py-8"
+  style="background-image: url(/assets/img/hero.jpg)"
+>
+  <div
+    class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from bg-cover bg-center bg-no-repeat"
+  ></div>
+
+  <div
+    class="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48"
+  >
+    <div class="flex flex-col items-center justify-center lg:flex-row">
+
+      <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
+        <h1
+        class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl "
+      >
+        XL Branding
+      </h1>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-grey-50" id="heat-transfers">
+  <div class="bg-grey-50" id="order">
+    <div class="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
+      <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
+        <h2
+          class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl animate-jump-in"
+        >
+         Services
+        </h2>
+          <ul class="list-decimal">
+              <li class="pt-12 text-primary font-bold sm:text-lg lg: text-xl" id="embroidery">EMBROIDERY</li>
+              <div class="flex flex-wrap gap-4 pt-6">
+                <div class="card w-1/4 p-2">
+                    <img src="./assets/img/embroidery.JPEG" alt="Embroidery Image 1" class="w-full h-auto">
+                </div>
+                <div class="card w-1/4 p-2">
+                    <img src="./assets/img/service4.JPEG" alt="Embroidery Image 2" class="w-full h-auto">
+                </div>
+                <div class="card w-1/4 p-2">
+                    <img src="./assets/img/service5.JPEG" alt="Embroidery Image 3" class="w-full h-auto">
+                </div>
+            </div>
+             
+
+              <p class="pt-6 font-body leading-relaxed text-grey-20">Embroidery is a decorating method that uses needles and vibrant thread to create simple or intricate designs.<br> Embroidery is durable and elegant, has almost no effect on washing and can maintain their fine and beautiful look after several years. 
+
+                We use quality polyester and rayon threads for their sheen and strength. We also use high-visibility, metallic and fire-retardant to meet your needs. 
+                
+                We employ different embroidery techniques to bring designs to life:</p>
+                
+                <p class="pt-6 font-body leading-relaxed text-grey-20">A.	Flat Direct Embroidery: It’s our most popular embroidery decoration where stitches are applied directly to a garment or fabric creating a flat design.</p> 
+                
+                
+                <p class="pt-6 font-body leading-relaxed text-grey-20">B.	3D Puff Embroidery: It is a technique where foam is inserted under the top stitches to raise the surface, giving a 3-dimensional look to the design (most commonly used on caps).</p> 
+                
+                
+                
+                <p class="pt-6 font-body leading-relaxed text-grey-20">C.	Embroidered Patches: A piece of fabric, most frequently cotton twill, is used as backing and the design is stitched directly into it and finished with an embroidered border. There are various ways of affixing them to products such as with a pin, sewn on, iron-on and Velcro backing.</p> 
+                
+                
+                
+                <p class="pt-6 font-body leading-relaxed text-grey-20"> D.	Tackle Twill or Applique: This technique involves sewing down a cut-out shape of material, typically numbers or letters, onto another material. The edge can then be finished with an embroidered border to create a nice, finished look without adding too many stitches, which can be more expensive. This technique is great for covering large areas with a logo or text where embroidering would be too heavy or make the garment uncomfortable to wear.</p> 
+                
+                <p class="pt-6 font-body leading-relaxed text-grey-20">To keep embroidery from getting damaged, we recommend spot cleaning with warm water and mild detergent, avoid scrubbing the embroidery directly. For machine washing, turn inside out, opt for cold water, mild detergent and run in delicate cycle. Immediately after washing, place on flat surface to air dry or tumble dry on low heat. Do not iron directly on embroidery, turn inside out and use a damp towel or cloth to protect from heat.
+                 </p>
+  
+              <li class="pt-12 text-primary font-bold sm:text-lg lg: text-xl" id="heat_transfers">HEAT TRANSFERS</li>
+              <div class="flex flex-wrap gap-4 pt-6">
+                <div class="card w-1/4 p-2">
+                    <img src="./assets/img/HEAT TRANSFERS1.jpg" alt="Embroidery Image 1" class="w-full h-auto">
+                </div>
+                <div class="card w-1/4 p-2">
+                    <img src="./assets/img/HEAT TRANSFERS2.jpg" alt="Embroidery Image 2" class="w-full h-auto">
+                </div>
+                <div class="card w-1/4 p-2">
+                    <img src="./assets/img/HEAT TRANSFERS4.jpg" alt="Embroidery Image 3" class="w-full h-auto">
+                </div>
+              </div>
+
+              <p class="pt-6 font-body leading-relaxed text-grey-20">Heat transfer printing is an embellishment method that requires printing a design on special paper and then transferring onto an item using heat and pressure. It is a cost-effective and simple way to create custom-printed products.</p> 
+
+                <p class="pt-6 font-body leading-relaxed text-grey-20">Raster images (pixel-based artwork such as JPEG’s, TIF’s, BMP’s or PNG’s) must be first converted into vector images, which allows an image to be scaled or modified without losing quality or resolution. The artwork must then be printed onto special paper and flipped on the horizontal axis which allows the design to be placed oriented the right way on the garment.  The artwork is then pressed into fabric for a preset period of time.</p> 
+                
+                  <p class="pt-6 font-body leading-relaxed text-grey-20">Heat transfer printing is relatively inexpensive compared to other forms of printing like screen printing or dye-sublimation printing and has a faster turnaround time as there is minimal setup time. Heat transfer vinyl typically lasts up to 50+ wash and dry cycles, or one to two years depending on washing frequency.  To prolong their lifespan wash clothes inside out, use warm or cold water and hang to air dry or machine dry on low heat setting. Never directly iron on heat transfer as it could melt or burn.               
+                  </p>
+  
+              <li class="pt-12 text-primary font-bold sm:text-lg lg: text-xl" id="dye-sublimated-crests">DYE SUBLIMATED CRESTS</li>
+              <img src="./assets/img/DYE Sublimated.jpg" alt="Embroidery Image" class="w-full h-auto pt-6">
+              <p class="pt-6 font-body leading-relaxed text-grey-20">A dye sublimated crest is a patch that is created using a special type of ink that turns into a gas when heated, and then binds with the fibers of the fabric. The design is first printed onto a special type of paper, then placed onto the fabric, and both are placed into a heat press, resulting in a high-quality, full-color crest that is long-lasting and durable. 
+                  </p>              
+          </ul>
+  
+        </div>
+      </div>
+    </div>
+</div>
+<div class="container py-16 md:py-20" id="contact">
+  <h2
+    class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+  >
+  Contact
+  </h2>
+  
+  <div class="mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6">
+
+  </div>
+
+  <div class="flex flex-col pt-16 lg:flex-row">
+    <div
+      class="w-full border-b-2 border-l-2 border-r-2 border-t-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3"
+    >
+      <div class="flex items-center">
+        <i class="bx bx-phone text-2xl text-grey-40"></i>
+        <p
+          class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
+        >
+          Phone
+        </p>
+      </div>
+      <a href="tel:+16044228785"
+        class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+      >
+      +1 (604) 422-8785
+    </a>
+    </div>
+    <div
+      class="w-full border-b-2 border-l-2 border-r-2 border-t-0 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
+    >
+      <div class="flex items-center">
+        <i class="bx bx-envelope text-2xl text-grey-40"></i>
+        <p
+          class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
+        >
+          Email
+        </p>
+      </div>
+      <a
+        class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+        href="mailto:infoxlbranding@gmail.com"
+      >
+        infoxlbranding@gmail.com
+      </a>
+    </div>
+    <div
+      class="w-full border-b-2 border-l-2 border-r-2 border-t-0 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
+    >
+      <div class="flex items-center">
+        <i class="bx bx-map text-2xl text-grey-40"></i>
+        <p
+          class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
+        >
+        Address
+        </p>
+      </div>
+      <p
+        class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+      >
+      4181 McConnell Dr, Burnaby, BC V5A 3J7
+      </p>
+    </div>
+  </div>
+</div>
+
+<div  >
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.555809032824!2d-122.94357272292118!3d49.24691027138748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486779ce5d18419%3A0x224cab92c02b3c6d!2sXL%20Branding!5e0!3m2!1sen!2sca!4v1715369420591!5m2!1sen!2sca"
+    class="h-72 bg-cover bg-center bg-no-repeat sm:h-64 md:h-72 lg:h-96"
+    width="100%"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+</div>
+
+      <div class="bg-primary">
+  <div class="container flex flex-col justify-center py-6 sm:flex-row">
+    <p class="text-center font-body text-white md:text-left">
+      © Copyright 2024. All right reserved, XLBranding.
+    </p>
+  </div>
+</div>
+
+
+
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+
+    
+  </body>
+</html>

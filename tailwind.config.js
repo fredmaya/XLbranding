@@ -20,8 +20,11 @@ module.exports = {
       secondary: "#091D34",
       white: "#ffffff",
       black: "#000000",
-      yellow: "#133863",
+      darkBlue: "#133863",
       lila: "#e6e5ec",
+      bluey: "#b4dfe5",
+      orange: "#f4976c",
+      yellow: "#fbe8a6",
       "grey-10": "#6c6b6d",
       "grey-20": "#7c7c7c",
       "grey-30": "#919091",
@@ -29,8 +32,8 @@ module.exports = {
       "grey-50": "#f4f3f8",
       "grey-60": "#edebf6",
       "grey-70": "#d8d8d8",
-      "hero-gradient-from": "#236AB9",
-      "hero-gradient-to": "#b8c0ff",
+      "hero-gradient-from": "#f4976c",
+      "hero-gradient-to": "#fbe8a6",
       "blog-gradient-from": "#8f9098",
       "blog-gradient-to": "#222222",
     },
@@ -46,6 +49,9 @@ module.exports = {
     },
 
     extend: {
+      backgroundImage: {
+        embroidery: "url('/assets/img/embroidery.JPEG)",
+      },
       spacing: {
         13: "3.25rem",
         15: "3.75rem",
