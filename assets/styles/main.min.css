@@ -1553,6 +1553,45 @@ html {
    background-size: cover;
    background-position: center;
  }
+ .bg-custom,
+.bg-custom2,
+.bg-custom3 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-custom::before,
+.bg-custom2::before,
+.bg-custom3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color as needed */
+  z-index: 1;
+}
+
+a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Adjust the opacity and color as needed */
+  z-index: 1;
+}
+
+a .text-center, a .mx-auto {
+  position: relative;
+  z-index: 2;
+}
+
+a .text-center {
+  z-index: 2;
+}
 
 .border {
   border-width: 1px;
