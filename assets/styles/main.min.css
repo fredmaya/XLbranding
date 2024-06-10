@@ -2469,13 +2469,4 @@ html {
   .xl\:leading-9 {
     line-height: 2.25rem;
   }
-
-  #navbar {
-    background-color: transparent !important;
-    transition: background-color 0.3s ease !important;
-}
-
-.navbar.scrolled {
-    background-color: blue !important;
-}
 }
