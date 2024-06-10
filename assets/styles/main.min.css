@@ -1524,6 +1524,22 @@ html {
 .rounded-xl {
   border-radius: 0.75rem;
 }
+.bg-custom{
+  background-image: url('/assets/img/service2.JPEG');
+  background-size: cover;
+  background-position: center;
+}
+ .bg-custom2{
+   background-image: url('/assets/img/HEAT TRANSFERS4.jpg');
+   background-size: cover;
+   background-position: center;
+   
+ }
+ .bg-custom3{
+   background-image: url('/assets/img/DYE Sublimated.jpg');
+   background-size: cover;
+   background-position: center;
+ }
 
 .border {
   border-width: 1px;
