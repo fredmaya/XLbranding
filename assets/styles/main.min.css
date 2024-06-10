@@ -1616,6 +1616,11 @@ html {
   background-color: rgb(96 156 225 / var(--tw-bg-opacity));
 }
 
+.bg-bluey {
+  --tw-bg-opacity: 1;
+  background-color: rgb(180 223 229 / var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1981,6 +1986,7 @@ html {
           transition-duration: 150ms;
 }
 
+
 .hover\:bg-grey-20:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(124 124 124 / var(--tw-bg-opacity));
@@ -1994,6 +2000,10 @@ html {
 .hover\:text-darkBlue:hover {
   --tw-text-opacity: 1;
   color: rgb(19 56 99 / var(--tw-text-opacity));
+}
+.hover\:text-orange:hover {
+  --tw-text-opacity: 1;
+  color: rgb(244 151 108 / var(--tw-text-opacity));
 }
 
 .hover\:text-white:hover {
@@ -2459,4 +2469,13 @@ html {
   .xl\:leading-9 {
     line-height: 2.25rem;
   }
+
+  #navbar {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.navbar.scrolled {
+    background-color: blue !important;
+}
 }
