@@ -1996,6 +1996,11 @@ a:hover .bg-custom3::before {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-darkBlue {
+  --tw-text-opacity: 1;
+  color: rgb(19 56 99 / var(--tw-text-opacity));
+}
+
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2084,6 +2089,10 @@ a:hover .bg-custom3::before {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.hover\:text-yellow:hover {
+  --tw-text-opacity: 1;
+  color: rgb(251 232 166 / var(--tw-text-opacity));
 }
 
 .focus\:border-black:focus {
