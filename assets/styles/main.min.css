@@ -1554,15 +1554,15 @@ html {
    background-position: center;
  }
  .bg-custom,
-.bg-custom2,
-.bg-custom3 {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  color: white; /* Set the initial text color to white */
-  transition: filter 0.3s ease; /* Add transition for smooth effect */
-  filter: brightness(0.8)
-}
+ .bg-custom2,
+ .bg-custom3 {
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   color: white; /* Initial text color */
+   filter: brightness(80%); /* Make the background image darker */
+   transition: filter 0.3s ease; /* Smooth transition for filter effect */
+ }
 
 /* Hover effect to brighten the background image */
 .bg-custom:hover,
@@ -1593,6 +1593,7 @@ a .text-center, a .mx-auto {
 
 a .text-center p {
   color: white; /* Set text color to white initially */
+  
 }
 
 a .text-center h3 {
