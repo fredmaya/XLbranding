@@ -760,6 +760,19 @@ select {
   padding-right: 1rem;
   padding-left: 1rem;
 }
+
+
+@media (max-width: 400px) {
+  .list-decimal li {
+      font-size: 0.875rem; 
+  }
+
+
+  
+  .text-primary {
+      font-size: 1rem; 
+  }
+}
 @media (min-width: 375px) {
 
   .container {
@@ -1540,7 +1553,64 @@ html {
    background-size: cover;
    background-position: center;
  }
+ .bg-custom,
+.bg-custom2,
+.bg-custom3 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white; /* Set the initial text color to white */
+}
 
+.bg-custom::before,
+.bg-custom2::before,
+.bg-custom3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Adjust the opacity and color as needed */
+  z-index: 1;
+  transition: background 0.3s ease; /* Add transition for smooth effect */
+}
+
+a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Initial state */
+  z-index: 1;
+  transition: background 0.3s ease; /* Add transition for smooth effect */
+}
+
+a:hover .overlay {
+  background: rgba(255, 255, 255, 0.2); /* Brighten image on hover */
+}
+
+a .text-center, a .mx-auto {
+  position: relative;
+  z-index: 2;
+}
+
+
+a .text-center p {
+  color: white; /* Set text color to white initially */
+}
+
+
+a:hover .text-center p {
+  color: white; /* Ensure text color stays white on hover */
+}
+
+a:hover .bg-custom::before,
+a:hover .bg-custom2::before,
+a:hover .bg-custom3::before {
+  background: rgba(255, 255, 255, 0.1); /* Brighten overlay on hover */
+}
 .border {
   border-width: 1px;
 }
