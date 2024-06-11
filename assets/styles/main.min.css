@@ -1609,7 +1609,7 @@ a:hover .text-center p {
 a:hover .bg-custom::before,
 a:hover .bg-custom2::before,
 a:hover .bg-custom3::before {
-  background: rgba(255, 255, 255, 0.1); /* Brighten overlay on hover */
+  background: rgba(255, 255, 255, 0.5); /* Brighten overlay on hover */
 }
 .border {
   border-width: 1px;
