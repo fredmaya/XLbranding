@@ -1951,6 +1951,11 @@ a:hover .text-center p {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-orange {
+    --tw-text-opacity: 1;
+    color: rgb(244 151 108 / var(--tw-text-opacity));
+  }
+
 .text-bluey {
   --tw-text-opacity: 1;
   color: rgb(180 223 229 / var(--tw-text-opacity));
