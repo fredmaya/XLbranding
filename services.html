@@ -14,6 +14,7 @@
 
   <meta property="og:title" content="Homepage | Atom Template" />
 
+ 
   <meta property="og:locale" content="en_US" />
 
   <link
@@ -102,8 +103,8 @@
     }
 }"
 >
-  <div class="w-full z-50 top-0 py-3 sm:py-5  absolute
-  ">
+  <div class="w-full z-50 top-0 py-3 sm:py-5  fixed
+  " id="navbar">
   <div class="container flex items-center justify-between">
     <div>
       <a href="/">
@@ -117,38 +118,42 @@
           
           <a
             href="index.html"
-            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-yellow"
             >Home</a
           >
           
           <span
-            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+            class="block h-0.5 w-full bg-transparent"
           ></span>
         </li>
         
         <li class="group pl-6">
+
           <a
             href="order.html"
             class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
             >Order</a
+
           >
           
           <span
-            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+            class="block h-0.5 w-full bg-transparent"
           ></span>
         </li>
       
         
         <li class="group pl-6">
+
           
           <span
             @click="triggerNavItem('#contact')"
             class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
             >Contact</span
+
           >
           
           <span
-            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+            class="block h-0.5 w-full bg-transparent"
           ></span>
         </li>
 
@@ -170,7 +175,7 @@
   @click.self="mobileMenu = false"
 >
   <div
-    class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3"
+    class="absolute right-0 min-h-screen w-2/3 bg-black py-4 px-8 shadow md:w-1/3"
     @click.stop
   >
     <button
@@ -186,32 +191,38 @@
         
         <a
           href="index.html"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
           >Home</a
         >
         
       </li>
       
-      <li class="py-2">
-        
-        <a
-          href="order.html"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Order</a
-        >
-        
-      </li> 
+   
      
       
       <li class="py-2">
         
-        <span
-          @click="triggerMobileNavItem('index.html#contact')"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Contact</span
+
+        <a
+          href="order.html"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
+          >Order</a
+
         >
         
       </li>
+
+      <li class="py-2">
+        
+
+        <span
+          @click="triggerMobileNavItem('#contact')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
+          >Contact</span
+
+        >
+        
+      </li> 
      
       
     </ul>
@@ -222,7 +233,7 @@
       <div>
         <div
   class="relative bg-cover bg-center bg-no-repeat py-8"
-  style="background-image: url(/assets/img/hero.jpg)"
+  style="background-image: url(/assets/img/pepsi.JPEG)"
 >
   <div
     class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from bg-cover bg-center bg-no-repeat"
@@ -234,11 +245,11 @@
     <div class="flex flex-col items-center justify-center lg:flex-row">
 
       <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
-        <h1
+        <!-- <h1
         class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl "
       >
         XL Branding
-      </h1>
+      </h1> -->
 
       </div>
     </div>
@@ -250,11 +261,12 @@
     <div class="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
       <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
         <h2
-          class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl animate-jump-in"
+          class="font-header text-4xl font-semibold uppercase text-darkBlue sm:text-5xl lg:text-6xl animate-jump-in"
         >
          Services
         </h2>
           <ul class="list-decimal">
+
               <li class="pt-12 text-primary font-bold sm:text-lg lg: text-xl" id="embroidery">EMBROIDERY</li>
               <div class="flex flex-wrap gap-4 pt-6">
                 <div class="card w-1/4 p-2">
@@ -268,7 +280,6 @@
                 </div>
             </div>
              
-
               <p class="pt-6 font-body leading-relaxed text-grey-20">Embroidery is a decorating method that uses needles and vibrant thread to create simple or intricate designs.<br> Embroidery is durable and elegant, has almost no effect on washing and can maintain their fine and beautiful look after several years. 
 
                 We use quality polyester and rayon threads for their sheen and strength. We also use high-visibility, metallic and fire-retardant to meet your needs. 
@@ -291,6 +302,7 @@
                 <p class="pt-6 font-body leading-relaxed text-grey-20">To keep embroidery from getting damaged, we recommend spot cleaning with warm water and mild detergent, avoid scrubbing the embroidery directly. For machine washing, turn inside out, opt for cold water, mild detergent and run in delicate cycle. Immediately after washing, place on flat surface to air dry or tumble dry on low heat. Do not iron directly on embroidery, turn inside out and use a damp towel or cloth to protect from heat.
                  </p>
   
+
               <li class="pt-12 text-primary font-bold sm:text-lg lg: text-xl" id="heat_transfers">HEAT TRANSFERS</li>
               <div class="flex flex-wrap gap-4 pt-6">
                 <div class="card w-1/4 p-2">
@@ -307,12 +319,14 @@
               <p class="pt-6 font-body leading-relaxed text-grey-20">Heat transfer printing is an embellishment method that requires printing a design on special paper and then transferring onto an item using heat and pressure. It is a cost-effective and simple way to create custom-printed products.</p> 
 
                 <p class="pt-6 font-body leading-relaxed text-grey-20">Raster images (pixel-based artwork such as JPEG’s, TIF’s, BMP’s or PNG’s) must be first converted into vector images, which allows an image to be scaled or modified without losing quality or resolution. The artwork must then be printed onto special paper and flipped on the horizontal axis which allows the design to be placed oriented the right way on the garment.  The artwork is then pressed into fabric for a preset period of time.</p> 
+
                 
                   <p class="pt-6 font-body leading-relaxed text-grey-20">Heat transfer printing is relatively inexpensive compared to other forms of printing like screen printing or dye-sublimation printing and has a faster turnaround time as there is minimal setup time. Heat transfer vinyl typically lasts up to 50+ wash and dry cycles, or one to two years depending on washing frequency.  To prolong their lifespan wash clothes inside out, use warm or cold water and hang to air dry or machine dry on low heat setting. Never directly iron on heat transfer as it could melt or burn.               
                   </p>
-  
+
               <li class="pt-12 text-primary font-bold sm:text-lg lg: text-xl" id="dye-sublimated-crests">DYE SUBLIMATED CRESTS</li>
               <img src="./assets/img/DYE Sublimated.jpg" alt="Embroidery Image" class="w-full h-auto pt-6">
+
               <p class="pt-6 font-body leading-relaxed text-grey-20">A dye sublimated crest is a patch that is created using a special type of ink that turns into a gas when heated, and then binds with the fibers of the fabric. The design is first printed onto a special type of paper, then placed onto the fabric, and both are placed into a heat press, resulting in a high-quality, full-color crest that is long-lasting and durable. 
                   </p>              
           </ul>
@@ -323,7 +337,7 @@
 </div>
 <div class="container py-16 md:py-20" id="contact">
   <h2
-    class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+    class="text-center font-header text-4xl font-semibold uppercase text-darkBlue sm:text-5xl lg:text-6xl"
   >
   Contact
   </h2>
@@ -345,7 +359,7 @@
         </p>
       </div>
       <a href="tel:+16044228785"
-        class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+        class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
       >
       +1 (604) 422-8785
     </a>
@@ -362,7 +376,7 @@
         </p>
       </div>
       <a
-        class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+        class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
         href="mailto:infoxlbranding@gmail.com"
       >
         infoxlbranding@gmail.com
@@ -380,7 +394,7 @@
         </p>
       </div>
       <p
-        class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+        class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
       >
       4181 McConnell Dr, Burnaby, BC V5A 3J7
       </p>
@@ -401,7 +415,7 @@
 </div>
 </div>
 
-      <div class="bg-primary">
+      <div class="bg-orange">
   <div class="container flex flex-col justify-center py-6 sm:flex-row">
     <p class="text-center font-body text-white md:text-left">
       © Copyright 2024. All right reserved, XLBranding.

@@ -1538,7 +1538,7 @@ html {
   border-radius: 0.75rem;
 }
 .bg-custom{
-  background-image: url('/assets/img/service2.JPEG');
+  background-image: url('/assets/img/service4.JPEG');
   background-size: cover;
   background-position: center;
 }
@@ -1553,6 +1553,58 @@ html {
    background-size: cover;
    background-position: center;
  }
+ .bg-custom,
+ .bg-custom2,
+ .bg-custom3 {
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   color: white; /* Initial text color */
+   filter: brightness(80%); /* Make the background image darker */
+   transition: filter 0.3s ease; /* Smooth transition for filter effect */
+ }
+
+/* Hover effect to brighten the background image */
+.bg-custom:hover,
+.bg-custom2:hover,
+.bg-custom3:hover {
+  filter: brightness(1.1); /* Increase brightness */
+}
+
+a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Initial state */
+  z-index: 1;
+  transition: background 0.3s ease; /* Add transition for smooth effect */
+}
+
+a:hover .overlay {
+  background: rgba(255, 255, 255, 0.3); /* Brighten image on hover */
+}
+
+a .text-center, a .mx-auto {
+  position: relative;
+  z-index: 2;
+}
+
+a .text-center p {
+  color: white; /* Set text color to white initially */
+  
+}
+
+a .text-center h3 {
+  color: rgb(221, 226, 228); /* Set initial h3 color */
+}
+
+a:hover .text-center h3,
+a:hover .text-center p {
+  color: white; /* Ensure text color stays white on hover */
+}
+
 
 .border {
   border-width: 1px;
@@ -1614,6 +1666,11 @@ html {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-orange {
+  --tw-bg-opacity: 0.9;
+  background-color: rgb(244 151 108 / var(--tw-bg-opacity));
+}
+
 .bg-darkBlue {
   --tw-bg-opacity: 1;
   background-color: rgb(19 56 99 / var(--tw-bg-opacity));
@@ -1627,6 +1684,11 @@ html {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(96 156 225 / var(--tw-bg-opacity));
+}
+
+.bg-bluey {
+  --tw-bg-opacity: 1;
+  background-color: rgb(180 223 229 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -1889,6 +1951,11 @@ html {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-orange {
+    --tw-text-opacity: 1;
+    color: rgb(244 151 108 / var(--tw-text-opacity));
+  }
+
 .text-bluey {
   --tw-text-opacity: 1;
   color: rgb(180 223 229 / var(--tw-text-opacity));
@@ -1927,6 +1994,11 @@ html {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-darkBlue {
+  --tw-text-opacity: 1;
+  color: rgb(19 56 99 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1994,6 +2066,7 @@ html {
           transition-duration: 150ms;
 }
 
+
 .hover\:bg-grey-20:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(124 124 124 / var(--tw-bg-opacity));
@@ -2008,10 +2081,18 @@ html {
   --tw-text-opacity: 1;
   color: rgb(19 56 99 / var(--tw-text-opacity));
 }
+.hover\:text-orange:hover {
+  --tw-text-opacity: 1;
+  color: rgb(244 151 108 / var(--tw-text-opacity));
+}
 
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.hover\:text-yellow:hover {
+  --tw-text-opacity: 1;
+  color: rgb(251 232 166 / var(--tw-text-opacity));
 }
 
 .focus\:border-black:focus {

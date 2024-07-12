@@ -101,12 +101,12 @@
     }
 }"
 >
-  <div class="w-full z-50 top-0 py-3 sm:py-5  absolute
-  ">
+  <div class="w-full z-50 top-0 py-3 sm:py-5 fixed
+  " id="navbar">
   <div class="container flex items-center justify-between">
     <div>
       <a href="/">
-        <img src="/assets/img/xlBranding-logo.png" class="w-40 lg:w-52" alt="logo image" />
+        <img src="/assets/img/xlBranding-whiteLogo.png" class="w-40 lg:w-52" alt="logo image" />
       </a>
     </div>
     <div class="hidden lg:block">
@@ -116,12 +116,12 @@
           
           <span
             @click="triggerNavItem('#about')"
-            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-yellow"
             >About</span
           >
           
           <span
-            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+            class="block h-0.5 w-full bg-transparent"
           ></span>
         </li>
         
@@ -129,37 +129,39 @@
           
           <span
             @click="triggerNavItem('#services')"
-            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-yellow"
             >Services</span
           >
           
           <span
-            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+            class="block h-0.5 w-full bg-transparent"
           ></span>
         </li>
         
-        <li class="group pl-6">
-          
-          <span
-            @click="triggerNavItem('#contact')"
-            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-            >Contact</span
-          >
-          
-          <span
-            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-          ></span>
-        </li>
+       
 
         <li class="group pl-6">
           <a
             href="order.html"
-            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-yellow"
             >Order</a
           >
           
           <span
-            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+            class="block h-0.5 w-full bg-transparent"
+          ></span>
+        </li>
+
+        <li class="group pl-6">
+          
+          <span
+            @click="triggerNavItem('#contact')"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-yellow"
+            >Contact</span
+          >
+          
+          <span
+            class="block h-0.5 w-full bg-transparent"
           ></span>
         </li>
         
@@ -179,7 +181,7 @@
   @click.self="mobileMenu = false"
 >
   <div
-    class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3"
+    class="absolute right-0 min-h-screen w-2/3 bg-black py-4 px-8 shadow md:w-1/3"
     @click.stop
   >
     <button
@@ -195,7 +197,7 @@
         
         <span
           @click="triggerMobileNavItem('#about')"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
           >About</span
         >
         
@@ -205,28 +207,30 @@
         
         <span
           @click="triggerMobileNavItem('#services')"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
           >Services</span
         >
         
       </li>
       
-      <li class="py-2">
-        
-        <span
-          @click="triggerMobileNavItem('#contact')"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Contact</span
-        >
-        
-      </li>
+    
       
       <li class="py-2">
         
         <a
           href="order.html"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
           >Order</a
+        >
+        
+      </li>
+
+      <li class="py-2">
+        
+        <span
+          @click="triggerMobileNavItem('#contact')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
+          >Contact</span
         >
         
       </li>
@@ -238,7 +242,7 @@
       <div>
         <div
   class="relative bg-cover bg-center bg-no-repeat py-8"
-  style="background-image: url(/assets/img/hero.jpg)"
+  style="background-image: url(/assets/img/embroidery-machine.jpg)"
 >
   <div
     class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from bg-cover bg-center bg-no-repeat"
@@ -251,7 +255,7 @@
 
       <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
         <h1
-          class="text-center font-header text-4xl text-bluey sm:text-left sm:text-5xl md:text-6xl"
+          class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
         >
           Welcome to XL Branding
         </h1>
@@ -265,7 +269,7 @@
   <div class="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
     <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
       <h2
-        class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+        class="font-header text-4xl font-semibold uppercase text-darkBlue sm:text-5xl lg:text-6xl"
       >
        About us
       </h2>
@@ -300,10 +304,10 @@
 
 
 
-
 <div class="container py-16 md:py-20" id="services">
+
   <h2
-    class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+    class="text-center font-header text-4xl font-semibold uppercase text-darkBlue sm:text-5xl lg:text-6xl"
   >
     Services
   </h2>
@@ -311,12 +315,11 @@
   <div
     class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3"
   >
-    <a href="services.html#embroidery" class="relative group rounded px-8 py-12 shadow hover:bg-primary bg-custom overflow-hidden block">
-      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28"></div>
-      <div class="text-center">
-        <h3
-          class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-darkBlue lg:text-xl"
-        >
+  <a href="services.html#embroidery" class="relative group rounded px-8 py-12 shadow hover:bg-darkBlue bg-custom overflow-hidden block">
+    <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28"></div>
+    <div class="text-center relative z-10">
+      <h3 class="pt-8 text-lg font-semibold uppercase text-darkBlue group-hover:text-yellow lg:text-xl">
+
           Embroidery
         </h3>
         <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
@@ -325,13 +328,13 @@
       </div>
     </a>
 
-    <a href="services.html#heat_transfers" class="relative group rounded px-8 py-12 shadow hover:bg-primary bg-custom2 overflow-hidden block">
+
+    <a href="services.html#heat_transfers" class="relative group rounded px-8 py-12 shadow hover:bg-darkBlue bg-custom2 overflow-hidden block">
       <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28"></div>
-      <div class="text-center">
-        <h3
-          class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-darkBlue lg:text-xl"
-        >
+      <div class="text-center relative z-10">
+        <h3 class="pt-8 text-lg font-semibold uppercase text-darkBlue group-hover:text-yellow lg:text-xl">
         HEAT TRANSFERS
+
         </h3>
         <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
           Heat transfer printing is an embellishment method that requires printing a design on special paper and then transferring onto an item using heat and pressure.
@@ -339,18 +342,19 @@
       </div>
     </a> 
 
-    <a href="services.html#dye-sublimated-crests" class="relative group rounded px-8 py-12 shadow hover:bg-primary bg-custom3 overflow-hidden block">
+
+    <a href="services.html#dye-sublimated-crests" class="relative group rounded px-8 py-12 shadow hover:bg-darkBlue bg-custom3 overflow-hidden block">
       <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28"></div>
       <div class="text-center relative z-10">
-        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
+        <h3 class="pt-8 text-lg font-semibold uppercase text-darkBlue group-hover:text-yellow lg:text-xl">
+
           DYE SUBLIMATED CRESTS
         </h3>
         <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-          A dye sublimated crest is a patch that is created using a special type of ink that turns into a gas when heated, and then binds with the fibers of the fabric. 
+          A dye sublimated crest is a patch that is created using a special type of ink that turns into a gas when heated, and then binds with the fibers of the fabric.
         </p>
       </div>
     </a>
-
   </div>
 </div>
 
@@ -361,7 +365,7 @@
 
 <div class="container py-16 md:py-20" id="contact">
   <h2
-    class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+    class="text-center font-header text-4xl font-semibold uppercase text-darkBlue sm:text-5xl lg:text-6xl"
   >
   Contact
   </h2>
@@ -383,7 +387,7 @@
         </p>
       </div>
       <a href="tel:+16044228785"
-        class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+        class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
       >
       +1 (604) 422-8785
     </a>
@@ -400,7 +404,7 @@
         </p>
       </div>
       <a
-        class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+        class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
         href="mailto:infoxlbranding@gmail.com"
       >
         infoxlbranding@gmail.com
@@ -412,13 +416,13 @@
       <div class="flex items-center">
         <i class="bx bx-map text-2xl text-grey-40"></i>
         <p
-          class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
+          class="pl-2 font-body font-bold uppercase text-orange lg:text-lg"
         >
         Address
         </p>
       </div>
       <p
-        class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+        class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
       >
       4181 McConnell Dr, Burnaby, BC V5A 3J7
       </p>
@@ -439,7 +443,7 @@
 </div>
 </div>
 
-      <div class="bg-primary">
+      <div class="bg-orange">
   <div class="container flex flex-col justify-center py-6 sm:flex-row">
     <p class="text-center font-body text-white md:text-left">
       © Copyright 2024. All right reserved, XLBranding.
