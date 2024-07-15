@@ -104,12 +104,12 @@
   <div class="w-full z-50 top-0 py-3 sm:py-5 fixed
   " id="navbar">
   <div class="container flex items-center justify-between">
-    <div>
+    <div class="navbar-logo hidden">
       <a href="/">
-        <img src="/assets/img/xlBranding-whiteLogo.png" class="w-40 lg:w-52" alt="logo image" />
+        <img src="/assets/img/XL Branding logo-01.png" class="w-40 lg:w-52" alt="logo image" />
       </a>
     </div>
-    <div class="hidden lg:block">
+    <div class="lg:block ml-auto">
       <ul class="flex items-center">
         
         <li class="group pl-6">
@@ -167,7 +167,7 @@
         
       </ul>
     </div>
-    <div class="block lg:hidden">
+    <div class="block lg:hidden absolute top-0 right-0 mt-4 mr-4">
       <button @click="mobileMenu = true">
         <i class="bx bx-menu text-4xl text-white"></i>
       </button>
@@ -253,12 +253,10 @@
   >
     <div class="flex flex-col items-center justify-center lg:flex-row">
 
-      <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
-        <h1
-          class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
-        >
-          XL Branding
-        </h1>
+      <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0 hero-logo">
+        <a href="/">
+            <img src="/assets/img/XL Branding logo-01.png" class="w-72 lg:w-72" alt="logo image" />
+          </a>
 
       </div>
     </div>
