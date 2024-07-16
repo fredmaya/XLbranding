@@ -1872,11 +1872,15 @@ a:hover .text-center p {
 }
 
 .font-body {
-  font-family: Open Sans, sans-serif;
+  font-family: Montserrat, sans-serif, bold;
 }
 
 .font-header {
-  font-family: Raleway, sans-serif;
+  font-family: Droid Serif, sans-serif, italic;
+}
+
+.subheader {
+  font-family: Droid Serif, sans-serif, italic;
 }
 
 .text-2xl {
