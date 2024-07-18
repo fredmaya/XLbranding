@@ -14,15 +14,14 @@ window.addEventListener("scroll", function () {
     navbarLogo.classList.add("hidden");
 
     // navbar.classList.remove('scrolled');
-
   }
 });
 
-// JavaScript for automatic image rotation
 document.addEventListener("DOMContentLoaded", function () {
-  let currentSlide = 1;
   const totalSlides = 3; // Total number of slides
+  let currentSlide = 1;
 
+  // Function to show a specific slide
   function showSlide(slideIndex) {
     // Hide all slides
     for (let i = 1; i <= totalSlides; i++) {
@@ -32,11 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById(`slide${slideIndex}`).classList.remove("hidden");
   }
 
+  // Function to preload images
+  function preloadImages() {
+    for (let i = 1; i <= totalSlides; i++) {
+      const img = new Image();
+      img.src = `./assets/img/HEAT TRANSFERS${i}.jpg`; // Replace with your actual image paths
+    }
+  }
+
+  // Initialize carousel
+  function initCarousel() {
+    preloadImages(); // Preload images before starting the carousel
+    showSlide(currentSlide); // Show the first slide immediately
+    setInterval(nextSlide, 2000); // Rotate slides every 2 seconds (adjust timing as needed)
+  }
+
+  // Function to move to the next slide
   function nextSlide() {
     currentSlide = (currentSlide % totalSlides) + 1;
     showSlide(currentSlide);
   }
 
-  // Automatically rotate slides every 3 seconds
-  setInterval(nextSlide, 2000); // Adjust timing as needed (in milliseconds)
+  // Start the carousel
+  initCarousel();
 });
