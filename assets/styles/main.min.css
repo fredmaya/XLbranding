@@ -312,6 +312,18 @@ legend {
   padding: 0;
 }
 
+   /* Common Styles */
+   .slide {
+    @apply relative h-full w-full;
+  }
+  .image {
+    @apply h-full w-full object-cover;
+  }
+  /* Optional: Adjust container dimensions as needed */
+  .carousel-container {
+    @apply mt-10 h-[40vw] w-[80vw] overflow-y-hidden;
+  }
+
 ol,
 ul,
 menu {
@@ -1710,7 +1722,7 @@ html {
   background-position: center;
 }
 .bg-custom3 {
-  background-image: url("/assets/img/DYE Sublimated.jpg");
+  background-image: url("/assets/img/PATcarousel3.jpg");
   background-size: cover;
   background-position: center;
 }

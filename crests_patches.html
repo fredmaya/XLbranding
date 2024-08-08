@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+
+    <title>XL Branding</title>
+
+    <meta property="og:title" content="Homepage | Atom Template" />
+
+    <meta property="og:locale" content="en_US" />
+
+    <link rel="canonical" href="//" />
+
+    <meta property="og:url" content="//" />
+
+    <meta
+      name="description"
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    />
+
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <meta name="theme-color" content="#5540af" />
+
+    <meta property="og:site_name" content="Atom Template" />
+
+    <meta property="og:image" content="//assets/img/social.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:site" content="@tailwindmade" />
+
+    <link
+      crossorigin="crossorigin"
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+    />
+
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="preload"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      crossorigin="anonymous"
+      href="/assets/styles/main.min.css"
+      media="screen"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+
+  <body
+    :class="{ 'overflow-hidden max-h-screen': mobileMenu }"
+    class="relative"
+    x-data="{ mobileMenu: false }"
+  >
+    <div id="main" class="relative">
+      <div
+        x-data="{
+    triggerNavItem(id) {
+        $scroll(id)
+    },
+    triggerMobileNavItem(id) {
+        mobileMenu = false;
+        this.triggerNavItem(id)
+    }
+}"
+      >
+        <div class="fixed top-0 z-50 w-full py-3 sm:py-5" id="navbar">
+          <div class="container flex items-center justify-between">
+            <div>
+              <a href="/">
+                <img
+                  src="/assets/img/XL Branding logo-01.png"
+                  class="w-40 lg:w-52"
+                  alt="logo image"
+                />
+              </a>
+            </div>
+            <div class="hidden lg:block">
+              <ul class="flex items-center">
+                <li class="group pl-6">
+                  <a
+                    href="index.html"
+                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-yellow"
+                    >Home</a
+                  >
+
+                  <span class="block h-0.5 w-full bg-transparent"></span>
+                </li>
+
+                <li class="group pl-6">
+                  <a
+                    href="order.html"
+                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                    >Order</a
+                  >
+
+                  <span class="block h-0.5 w-full bg-transparent"></span>
+                </li>
+
+                <li class="group pl-6">
+                  <span
+                    @click="triggerNavItem('#contact')"
+                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                    >Contact</span
+                  >
+
+                  <span class="block h-0.5 w-full bg-transparent"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="block lg:hidden">
+              <button @click="mobileMenu = true">
+                <i class="bx bx-menu text-4xl text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden"
+          :class="{ 'opacity-100 pointer-events-auto': mobileMenu }"
+          @click.self="mobileMenu = false"
+        >
+          <div
+            class="absolute right-0 min-h-screen w-2/3 bg-black px-8 py-4 shadow md:w-1/3"
+            @click.stop
+          >
+            <button
+              class="absolute right-0 top-0 mr-4 mt-4"
+              @click="mobileMenu = false"
+            >
+              <img
+                src="/assets/img/icon-close.svg"
+                class="h-10 w-auto"
+                alt=""
+              />
+            </button>
+
+            <ul class="mt-8 flex flex-col">
+              <li class="py-2">
+                <a
+                  href="index.html"
+                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
+                  >Home</a
+                >
+              </li>
+
+              <li class="py-2">
+                <a
+                  href="order.html"
+                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
+                  >Order</a
+                >
+              </li>
+
+              <li class="py-2">
+                <span
+                  @click="triggerMobileNavItem('#contact')"
+                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white hover:text-orange"
+                  >Contact</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="relative bg-cover bg-center bg-no-repeat py-8"
+            style="background-image: url(/assets/img/pepsi.JPEG)"
+          >
+            <div
+              class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from bg-cover bg-center bg-no-repeat"
+            ></div>
+
+            <div
+              class="container relative z-30 pb-12 pt-20 sm:pb-48 sm:pt-56 lg:pb-48 lg:pt-64"
+            >
+              <div
+                class="flex flex-col items-center justify-center lg:flex-row"
+              >
+                <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-grey-50" id="heat_transfers">
+            <div class="container mx-auto flex flex-col items-center justify-center py-16 md:py-20 lg:flex-row">
+              <div class="w-full text-center text-justify">
+     <div class="flex flex-col items-center justify-center mb-8">
+  <h2 class="animate-jump-in mb-2 subheader text-3xl font-semibold uppercase text-darkBlue sm:text-4xl md:text-5xl lg:text-6xl">
+    CRESTS & PATCHES
+  </h2>
+ 
+</div>
+                <div class="flex items-center justify-center mb-8">
+                  <div class="font-serif flex h-[300px] w-[400px] flex-col items-center justify-center overflow-y-hidden text-white sm:h-[400px] sm:w-[500px] md:h-[500px] md:w-[700px] lg:h-[600px] lg:w-[800px]">
+                    <div id="slide1" class="slide">
+                      <img class="image h-full w-full object-cover" src="./assets/img/PATcarousel1.jpg" />
+                    </div>
+                    <div id="slide2" class="slide">
+                      <img class="image h-full w-full object-cover " src="./assets/img/PATcarousel2.jpg" />
+                    </div>
+                    <div id="slide3" class="slide">
+                      <img class="image h-full w-full object-cover" src="./assets/img/PATcarousel3.jpg" />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                    <p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+                        Patches are an easy and cost-effective way of adding style to clothing and accessories, they are long-lasting and can help the brand stand out. A patch is made up of twill and the design is stitched directly into it and finished with an embroidered border. There are various ways of affixing them to products such as with a pin, sewn on, iron-on, and hook and loop backing.
+
+                        <br><br>We have different types of patches to choose from:
+                  </p>
+                </div>
+                <br />
+               
+
+    <div class="flex mb-8">
+      <div class="flex-1 pr-4">
+        <h2 class="animate-jump-in text-1 font-header font-semibold uppercase text-orange sm:text-2xl md:text-3xl lg:text-4xl">
+            EMBROIDERED PATCHES
+        </h2><p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+            Made with thick, colorful thread attached to durable fabric. They produce raised images, making them feel more dynamic.
+        </p>
+      </div>
+      <div class="card w-1/4 p-2 ml-auto w-[150px] sm:w-[200px] md:w-[250px] lg:w-1/4 mt-6">
+        <img src="./assets/img/embroidered patches (1).jpg" alt="Heat Transfer Image 1" class="h-auto w-full" />
+      </div>
+    </div>
+                <div class="flex mb-8">
+                  <div class="flex-1">
+                    <h2 class="animate-jump-in text-1 font-header font-semibold uppercase text-orange sm:text-2xl md:text-3xl lg:text-4xl">
+                        WOVEN PATCHES
+                    </h2>
+                    <p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+                        Made with thin threads and are suitable for artwork with fine details or small lettering.
+                    </p>
+                  </div>
+                  <div class="card w-1/4 p-2 ml-auto w-[150px] sm:w-[200px] md:w-[250px] lg:w-1/4 mt-6">
+                    <img src="./assets/img/woven patches.jpg" alt="Heat Transfer Image 2" class="h-auto w-full" />
+                  </div>
+                </div>
+                <div class="flex mb-8">
+                  <div class="flex-1">
+                    <h2 class="animate-jump-in text-1 font-header font-semibold uppercase text-orange sm:text-2xl md:text-3xl lg:text-4xl">
+                        PRINTED PATCHES
+                    </h2>
+                    <p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+                        They have no color limitations and work best for small-detail designs, small text, multiple colors, gradients, and shades.
+                    </p>
+                  </div>
+                  <div class="card w-1/4 p-2 ml-auto w-[150px] sm:w-[200px] md:w-[250px] lg:w-1/4 mt-6">
+                    <img src="./assets/img/printed patches.jpg" alt="Heat Transfer Image 3" class="h-auto w-full" />
+                  </div>
+                </div>
+                <div class="flex mb-8">
+                  <div class="flex-1">
+                    <h2 class="animate-jump-in text-1 font-header font-semibold uppercase text-orange sm:text-2xl md:text-3xl lg:text-4xl">
+                        BADGES
+                    </h2>
+                    <p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+                        We embroider badges with names, titles, departments, or even logos. They typically come in standard rectangular shape, but if you’re looking for a specific size and shape, contact us to discuss custom options.
+                    </p>
+                  </div>
+                  <div class="card w-1/4 p-2 ml-auto w-[150px] sm:w-[200px] md:w-[250px] lg:w-1/4 mt-6">
+                    <img src="./assets/img/badges.jpg" alt="Heat Transfer Image 4" class="h-auto w-full" />
+                  </div>
+                </div>
+                <p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+                    Our patches usually come without any backing, but we offer iron-on, sew-on, and loop and hook Velcro backing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container py-16 md:py-20" id="contact">
+            <h2
+              class="text-center font-header text-4xl font-semibold uppercase text-darkBlue sm:text-5xl lg:text-6xl"
+            >
+            Contact
+            </h2>
+            
+            <div class="mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6">
+          
+            </div>
+          
+            <div class="flex flex-col pt-16 lg:flex-row">
+              <div
+                class="w-full border-b-2 border-l-2 border-r-2 border-t-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3"
+              >
+                <div class="flex items-center">
+                  <i class="bx bx-phone text-2xl text-orange"></i>
+                  <p
+                    class="pl-2 subheader font-bold uppercase text-orange lg:text-lg"
+                  >
+                    Phone
+                  </p>
+                </div>
+                <a href="tel:+16044228785"
+                  class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
+                >
+                +1 (604) 422-8785
+              </a>
+              </div>
+              <div
+                class="w-full border-b-2 border-l-2 border-r-2 border-t-0 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
+              >
+                <div class="flex items-center">
+                  <i class="bx bx-envelope text-2xl text-orange"></i>
+                  <p
+                    class="pl-2 subheader font-bold uppercase text-orange lg:text-lg"
+                  >
+                    Email
+                  </p>
+                </div>
+                <a
+                  class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
+                  href="mailto:infoxlbranding@gmail.com"
+                >
+                  infoxlbranding@gmail.com
+                </a>
+              </div>
+              <div
+                class="w-full border-b-2 border-l-2 border-r-2 border-t-0 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
+              >
+                <div class="flex items-center">
+                  <i class="bx bx-map text-2xl text-orange"></i>
+                  <p
+                    class="pl-2 subheader font-bold uppercase text-orange lg:text-lg"
+                  >
+                  Address
+                  </p>
+                </div>
+                <p
+                  class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
+                >
+                4181 McConnell Dr, Burnaby, BC V5A 3J7
+                </p>
+              </div>
+            </div>
+          </div>
+
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.555809032824!2d-122.94357272292118!3d49.24691027138748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486779ce5d18419%3A0x224cab92c02b3c6d!2sXL%20Branding!5e0!3m2!1sen!2sca!4v1715369420591!5m2!1sen!2sca"
+            class="h-72 bg-cover bg-center bg-no-repeat sm:h-64 md:h-72 lg:h-96"
+            width="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="bg-orange">
+        <div class="container flex flex-col justify-center py-6 sm:flex-row">
+          <p class="text-center font-body text-white md:text-left">
+            © Copyright 2024. All right reserved, XLBranding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="/assets/js/main.js"></script>
+</html>
