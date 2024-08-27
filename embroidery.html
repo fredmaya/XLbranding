@@ -26,6 +26,7 @@
     />
 
     <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
     <meta name="theme-color" content="#5540af" />
 
@@ -65,21 +66,10 @@
       media="screen"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Common Styles */
-      .slide {
-        @apply relative h-full w-full;
-      }
-      .image {
-        @apply h-full w-full object-cover;
-      }
-      /* Optional: Adjust container dimensions as needed */
-      .carousel-container {
-        @apply mt-10 h-[40vw] w-[80vw] overflow-y-hidden;
-      }
-    </style>
+
   </head>
 
   <body
@@ -104,7 +94,7 @@
             <div>
               <a href="/">
                 <img
-                  src="/assets/img/xlBranding-logo.png"
+                  src="/assets/img/XL Branding logo-01.png"
                   class="w-40 lg:w-52"
                   alt="logo image"
                 />
@@ -145,7 +135,7 @@
             </div>
             <div class="block lg:hidden">
               <button @click="mobileMenu = true">
-                <i class="bx bx-menu text-4xl text-black"></i>
+                <i class="bx bx-menu text-4xl text-white"></i>
               </button>
             </div>
           </div>
@@ -219,158 +209,160 @@
             </div>
           </div>
 
-          <div class="bg-grey-50" id="order">
-            <div
-              class="container flex flex-col items-center py-16 md:py-20 lg:flex-row"
-            >
-              <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
-                <h2
-                  class="animate-jump-in font-header text-4xl font-semibold uppercase text-darkBlue sm:text-5xl lg:text-6xl"
-                >
-                  EMBROIDERY
-                </h2>
+          <div class="bg-grey-50" id="heat_transfers">
+            <div class="container mx-auto flex flex-col items-center justify-center py-16 md:py-20 lg:flex-row">
+              <div class="w-full text-center text-justify">
+     <div class="flex flex-col items-center justify-center mb-8">
+  <h2 class="animate-jump-in mb-2 subheader text-3xl font-semibold uppercase text-darkBlue sm:text-4xl md:text-5xl lg:text-6xl">
+    embroidery
+  </h2>
+ 
+  <div class="flex items-center justify-center mb-8 relative">
+    <div class="font-serif flex h-[300px] w-[320px] flex-col items-center justify-center overflow-y-hidden text-white sm:h-[400px] sm:w-[500px] md:h-[500px] md:w-[700px] lg:h-[600px] lg:w-[800px]">
+      <div id="slide1" class="slide hidden">
+        <img class="image h-full w-full object-cover" src="./assets/img/EMBcarousel3.jpg" />
+      </div>
+      <div id="slide2" class="slide hidden">
+        <img class="image h-full w-full object-cover " src="./assets/img/EMBcarousel2.jpg" />
+      </div>
+      <div id="slide3" class="slide hidden">
+        <img class="image h-full w-full object-cover" src="./assets/img/EMBcarousel1.jpg" />
+      </div>
+    </div>
+    
+    <div class="absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white text-3xl" id="prevButton">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white text-3xl" id="nextButton">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+    
+  
+    
+    
+  </div>
+                <div>
+                  <p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+                    Embroidery uses needles and vibrant thread to create simple or intricate designs. It is durable and elegant, and it can maintain a fine and beautiful look after several years.
+                    We use quality polyester and rayon threads for their sheen and strength, and also work with high-visibility (reflective), metallic, and fire-retardant thread to meet your needs.
+                    <br><br>We employ different embroidery techniques to bring designs to life:
+                </p>
+                </div>
+                <br />
+               
 
-                <div
-                  class="font-serif flex flex-col items-center overflow-y-hidden text-white md:h-[500px] md:w-[700px]"
-                >
-                  <div id="slide1" class="slide">
-                    <img class="image" src="./assets/img/embroidery.JPEG" />
-                    <a href="#slide3" class="prev arrow"> &lt; </a>
-                    <a href="#slide2" class="next arrow"> &gt; </a>
+    <div class="flex mb-8">
+      <div class="flex-1 pr-4">
+        <h2 class="animate-jump-in text-1 font-header font-semibold uppercase text-orange sm:text-2xl md:text-3xl lg:text-4xl">
+            DIRECT EMBROIDERY
+        </h2><p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+          It's our most popular embroidery decoration technique, where stitches are applied directly to the garment or fabric, creating a flat design.
+        </p>
+      </div>
+      <div class="card w-1/4 p-2 ml-auto w-[150px] sm:w-[200px] md:w-[250px] lg:w-1/4 mt-6">
+        <img src="./assets/img/direct_embroidery.jpg" alt="Heat Transfer Image 1" class="h-auto w-full" />
+      </div>
+    </div>
+                <div class="flex mb-8">
+                  <div class="flex-1">
+                    <h2 class="animate-jump-in text-1 font-header font-semibold uppercase text-orange sm:text-2xl md:text-3xl lg:text-4xl">
+                        3D PUFF EMBROIDERY
+                    </h2>
+                    <p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+                      It is a technique where foam is inserted under the top stitches to raise the surface, giving a 3-dimensional look to the design (most commonly used on caps).
+                  </p>
                   </div>
-                  <div id="slide2" class="slide">
-                    <img class="image" src="./assets/img/service4.JPEG" />
-                    <a href="#slide1" class="prev arrow"> &lt; </a>
-                    <a href="#slide3" class="next arrow"> &gt; </a>
-                  </div>
-                  <div id="slide3" class="slide">
-                    <img class="image" src="./assets/img/service5.JPEG" />
-                    <a href="#slide2" class="prev arrow"> &lt; </a>
-                    <a href="#slide1" class="next arrow"> &gt; </a>
+                  <div class="card w-1/4 p-2 ml-auto w-[150px] sm:w-[200px] md:w-[250px] lg:w-1/4 mt-6">
+                    <img src="./assets/img/3D_puff_embroidery.jpg" alt="Heat Transfer Image 2" class="h-auto w-full" />
                   </div>
                 </div>
-
-                <p class="pt-6 font-body leading-relaxed text-grey-20">
-                  Embroidery is a decorating method that uses needles and
-                  vibrant thread to create simple or intricate designs.<br />
-                  Embroidery is durable and elegant, has almost no effect on
-                  washing and can maintain their fine and beautiful look after
-                  several years. We use quality polyester and rayon threads for
-                  their sheen and strength. We also use high-visibility,
-                  metallic and fire-retardant to meet your needs. We employ
-                  different embroidery techniques to bring designs to life:
-                </p>
-
-                <p class="pt-6 font-body leading-relaxed text-grey-20">
-                  A. Flat Direct Embroidery: It’s our most popular embroidery
-                  decoration where stitches are applied directly to a garment or
-                  fabric creating a flat design.
-                </p>
-
-                <p class="pt-6 font-body leading-relaxed text-grey-20">
-                  B. 3D Puff Embroidery: It is a technique where foam is
-                  inserted under the top stitches to raise the surface, giving a
-                  3-dimensional look to the design (most commonly used on caps).
-                </p>
-
-                <p class="pt-6 font-body leading-relaxed text-grey-20">
-                  C. Embroidered Patches: A piece of fabric, most frequently
-                  cotton twill, is used as backing and the design is stitched
-                  directly into it and finished with an embroidered border.
-                  There are various ways of affixing them to products such as
-                  with a pin, sewn on, iron-on and Velcro backing.
-                </p>
-
-                <p class="pt-6 font-body leading-relaxed text-grey-20">
-                  D. Tackle Twill or Applique: This technique involves sewing
-                  down a cut-out shape of material, typically numbers or
-                  letters, onto another material. The edge can then be finished
-                  with an embroidered border to create a nice, finished look
-                  without adding too many stitches, which can be more expensive.
-                  This technique is great for covering large areas with a logo
-                  or text where embroidering would be too heavy or make the
-                  garment uncomfortable to wear.
-                </p>
-
-                <p class="pt-6 font-body leading-relaxed text-grey-20">
-                  To keep embroidery from getting damaged, we recommend spot
-                  cleaning with warm water and mild detergent, avoid scrubbing
-                  the embroidery directly. For machine washing, turn inside out,
-                  opt for cold water, mild detergent and run in delicate cycle.
-                  Immediately after washing, place on flat surface to air dry or
-                  tumble dry on low heat. Do not iron directly on embroidery,
-                  turn inside out and use a damp towel or cloth to protect from
-                  heat.
-                </p>
+                <div class="flex mb-8">
+                  <div class="flex-1">
+                    <h2 class="animate-jump-in text-1 font-header font-semibold uppercase text-orange sm:text-2xl md:text-3xl lg:text-4xl">
+                        TACKLE TWILL/APPLIQUE
+                    </h2>
+                    <p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+                      This technique involves sewing down a cut-out shape of material onto another. The edge can then be finished with an embroidered border to create a nice, finished look without adding too many stitches, which can be more expensive.
+                  </p>
+                  </div>
+                  <div class="card w-1/4 p-2 ml-auto w-[150px] sm:w-[200px] md:w-[250px] lg:w-1/4 mt-6">
+                    <img src="./assets/img/Tackle_applique.jpg" alt="Heat Transfer Image 3" class="h-auto w-full" />
+                  </div>
+                </div>
+           
+                <p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
+                  To keep embroidery from getting damaged, we recommend spot cleaning with warm water and mild detergent and avoiding scrubbing the embroidery directly. For machine washing, turn the item inside out, opt for cold water and mild detergent, and run on a delicate cycle. Immediately after washing, place the item on a flat surface to air dry or tumble dry on low heat. Do not iron directly on the embroidery, turn the item inside out and use a damp towel or cloth to protect it from heat.
+              </p>
               </div>
             </div>
           </div>
-        </div>
-        <div class="container py-16 md:py-20" id="contact">
-          <h2
-            class="text-center font-header text-4xl font-semibold uppercase text-darkBlue sm:text-5xl lg:text-6xl"
-          >
-            Contact
-          </h2>
 
-          <div class="mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6"></div>
-
-          <div class="flex flex-col pt-16 lg:flex-row">
-            <div
-              class="w-full border-b-2 border-l-2 border-r-2 border-t-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3"
+          <div class="container py-16 md:py-20" id="contact">
+            <h2
+              class="text-center font-header text-4xl font-semibold uppercase text-darkBlue sm:text-5xl lg:text-6xl"
             >
-              <div class="flex items-center">
-                <i class="bx bx-phone text-2xl text-grey-40"></i>
-                <p
-                  class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
-                >
-                  Phone
-                </p>
-              </div>
-              <a
-                href="tel:+16044228785"
-                class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
+            Contact
+            </h2>
+            
+            <div class="mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6">
+          
+            </div>
+          
+            <div class="flex flex-col pt-16 lg:flex-row">
+              <div
+                class="w-full border-b-2 border-l-2 border-r-2 border-t-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3"
               >
+                <div class="flex items-center">
+                  <i class="bx bx-phone text-2xl text-orange"></i>
+                  <p
+                    class="pl-2 subheader font-bold uppercase text-orange lg:text-lg"
+                  >
+                    Phone
+                  </p>
+                </div>
+                <a href="tel:+16044228785"
+                  class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
+                >
                 +1 (604) 422-8785
               </a>
-            </div>
-            <div
-              class="w-full border-b-2 border-l-2 border-r-2 border-t-0 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
-            >
-              <div class="flex items-center">
-                <i class="bx bx-envelope text-2xl text-grey-40"></i>
-                <p
-                  class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
-                >
-                  Email
-                </p>
               </div>
-              <a
-                class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
-                href="mailto:infoxlbranding@gmail.com"
+              <div
+                class="w-full border-b-2 border-l-2 border-r-2 border-t-0 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
               >
-                infoxlbranding@gmail.com
-              </a>
-            </div>
-            <div
-              class="w-full border-b-2 border-l-2 border-r-2 border-t-0 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
-            >
-              <div class="flex items-center">
-                <i class="bx bx-map text-2xl text-grey-40"></i>
-                <p
-                  class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
+                <div class="flex items-center">
+                  <i class="bx bx-envelope text-2xl text-orange"></i>
+                  <p
+                    class="pl-2 subheader font-bold uppercase text-orange lg:text-lg"
+                  >
+                    Email
+                  </p>
+                </div>
+                <a
+                  class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
+                  href="mailto:infoxlbranding@gmail.com"
                 >
+                  infoxlbranding@gmail.com
+                </a>
+              </div>
+              <div
+                class="w-full border-b-2 border-l-2 border-r-2 border-t-0 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
+              >
+                <div class="flex items-center">
+                  <i class="bx bx-map text-2xl text-orange"></i>
+                  <p
+                    class="pl-2 subheader font-bold uppercase text-orange lg:text-lg"
+                  >
                   Address
+                  </p>
+                </div>
+                <p
+                  class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
+                >
+                4181 McConnell Dr, Burnaby, BC V5A 3J7
                 </p>
               </div>
-              <p
-                class="pt-2 text-left font-body font-bold text-darkBlue lg:text-lg"
-              >
-                4181 McConnell Dr, Burnaby, BC V5A 3J7
-              </p>
             </div>
           </div>
-        </div>
 
         <div>
           <iframe
