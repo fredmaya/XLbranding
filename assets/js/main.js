@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function initCarousel() {
     preloadImages(); // Preload images before starting the carousel
     showSlide(currentSlide); // Show the first slide immediately
-    setInterval(nextSlide, 2000); // Rotate slides every 2 seconds (adjust timing as needed)
   }
 
   // Function to move to the next slide
@@ -52,6 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(currentSlide);
   }
 
+  // Function to move to the previous slide
+  function prevSlide() {
+    currentSlide = ((currentSlide - 2 + totalSlides) % totalSlides) + 1; // Adjust this formula to ensure it wraps correctly
+    showSlide(currentSlide);
+  }
+
   // Start the carousel
   initCarousel();
+
+  // Add event listeners to arrows
+  document.getElementById("nextButton").addEventListener("click", nextSlide);
+  document.getElementById("prevButton").addEventListener("click", prevSlide);
 });

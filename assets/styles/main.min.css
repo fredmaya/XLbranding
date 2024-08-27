@@ -286,7 +286,15 @@ summary {
 /*
 Removes the default spacing and border for appropriate elements.
 */
+#prevButton, #nextButton {
+  font-size: 30px; /* Size of arrows */
+  color: white; /* Color of arrows */
+  padding: 16px; /* Space around the arrows */
+}
 
+#prevButton:hover, #nextButton:hover {
+  color: lightgray; /* Change color on hover */
+}
 blockquote,
 dl,
 dd,

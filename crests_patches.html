@@ -66,6 +66,7 @@
       media="screen"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -216,20 +217,30 @@
     CRESTS & PATCHES
   </h2>
  
-</div>
-                <div class="flex items-center justify-center mb-8">
-                  <div class="font-serif flex h-[300px] w-[400px] flex-col items-center justify-center overflow-y-hidden text-white sm:h-[400px] sm:w-[500px] md:h-[500px] md:w-[700px] lg:h-[600px] lg:w-[800px]">
-                    <div id="slide1" class="slide">
-                      <img class="image h-full w-full object-cover" src="./assets/img/PATcarousel1.jpg" />
-                    </div>
-                    <div id="slide2" class="slide">
-                      <img class="image h-full w-full object-cover " src="./assets/img/PATcarousel2.jpg" />
-                    </div>
-                    <div id="slide3" class="slide">
-                      <img class="image h-full w-full object-cover" src="./assets/img/PATcarousel3.jpg" />
-                    </div>
-                  </div>
-                </div>
+  <div class="flex items-center justify-center mb-8 relative">
+    <div class="font-serif flex h-[300px] w-[400px] flex-col items-center justify-center overflow-y-hidden text-white sm:h-[400px] sm:w-[500px] md:h-[500px] md:w-[700px] lg:h-[600px] lg:w-[800px]">
+      <div id="slide1" class="slide hidden">
+        <img class="image h-full w-full object-cover" src="./assets/img/PATcarousel3.jpg" />
+      </div>
+      <div id="slide2" class="slide hidden">
+        <img class="image h-full w-full object-cover " src="./assets/img/PATcarousel2.jpg" />
+      </div>
+      <div id="slide3" class="slide hidden">
+        <img class="image h-full w-full object-cover" src="./assets/img/PATcarousel1.jpg" />
+      </div>
+    </div>
+    
+    <div class="absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white text-3xl" id="prevButton">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white text-3xl" id="nextButton">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+    
+  
+    
+    
+  </div>
                 <div>
                     <p class="pt-6 font-body leading-relaxed text-grey-20 text-left text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">
                         Patches are an easy and cost-effective way of adding style to clothing and accessories, they are long-lasting and can help the brand stand out. A patch is made up of twill and the design is stitched directly into it and finished with an embroidered border. There are various ways of affixing them to products such as with a pin, sewn on, iron-on, and hook and loop backing.
